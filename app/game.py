@@ -23,7 +23,8 @@ class Game:
 
         self.resolve(player_item, bot_item)
 
-    def resolve(self, player_item, bot_item):
+    @staticmethod
+    def resolve(player_item, bot_item):
         if player_item == bot_item:
             print("Tie!")
             return
