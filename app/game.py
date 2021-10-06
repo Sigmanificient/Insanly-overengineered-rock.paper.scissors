@@ -1,3 +1,5 @@
+from termcolor import colored
+
 from app import Cli
 from app.bot import Bot
 from app.items import Item
@@ -26,8 +28,11 @@ class Game:
     @staticmethod
     def resolve(player_item, bot_item):
         if player_item == bot_item:
-            print("Tie!")
+            print(colored("Tie!", 'yellow'))
             return
 
-        players = ("Bot", "Player")
-        print(players[player_item > bot_item], "wins!")
+        if player_item > bot_item:
+            print(colored("You win!", 'green'))
+
+        else:
+            print(colored("You lost!", 'red'))
