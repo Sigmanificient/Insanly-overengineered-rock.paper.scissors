@@ -1,4 +1,5 @@
-from app import Cli
+from app.game import Game
 
 if __name__ == '__main__':
-    Cli.run()
+    game = Game()
+    game.run()

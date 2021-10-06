@@ -1,11 +1,11 @@
 from app.items import Item
+from app.bot import Bot
 
 
 class Cli:
     is_running = True
 
     @classmethod
-    def run(cls):
-        while cls.is_running:
-            action = input('Action:\n> ')
-            print(Item.from_string(action))
+    def get_action(cls):
+        return input('Action:\n> ')
+
